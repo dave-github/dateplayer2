@@ -1,0 +1,51 @@
+body {
+font-size:12px;
+font-family: arial;
+background:#333;
+color:#ddd;
+}
+
+audio {
+margin-top:20px;
+width:400px;
+}
+
+.input {
+width:120px;
+height:26px;
+border:1px solid #333;
+background:#666;
+color:#ddd;
+border-radius:4px;
+padding-left:4px;
+}
+
+#select_playlist {
+background:#666;
+color:#ddd;
+padding:4px;
+border:#222;
+width:90px;
+font-weight:bold;
+border:1px solid #222;
+border-radius:4px;
+}
+
+#playlist ul li {
+padding:3px 0px;
+width:350px
+}
+
+#playlist ul li:hover {
+
+background:#777;
+
+}
+
+.playing {
+background:#999;
+}
+
+label {
+float: left; width:150px; font-weight:bold;
+}
