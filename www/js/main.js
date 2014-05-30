@@ -93,18 +93,13 @@ $('document').ready(function () {
 			var html = '<p>Touch the track titles to start listening:</p><ol>';
 			$.each( data, function( key, val ) {
 				html +='<li><a href="#">' + val.song_title + ' - ' + val.artist_name + '</a></li>'+"\n";
-				/*
-				$('#player').append('<source src="http://api.ilikemusic.com/stream/'+username+'/'+val.obfus+'/stream'+key+'.mp3" type="audio/mpeg">'+"\n");*/
+				
 			});
 			 html += '</ol>';
 			$('#playlist').html(html);
 			
 			$('#playlist li').click(function(e) { 
 			var i = $(this).index() ;
-			/*$('#player').attr({
-				"src":'http://api.ilikemusic.com/stream/'+username+'/'+data[i].obfus+'/stream'+i+'.mp3',
-				"autoplay": "autoplay"
-				});*/
 				$("#playlist li").removeClass("playing");
 				$(this).attr({"class":"playing"});
 				stopAudio();
