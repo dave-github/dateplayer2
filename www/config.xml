@@ -6,14 +6,14 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>I has UK Top 20 player</name>
+    <name>BB UK Top 20 player</name>
 
     <description>
       UK Top 20 playlist audio player tester app
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
-     bluebit
+     Dave @ Bluebit
     </author>
 
     <!--
