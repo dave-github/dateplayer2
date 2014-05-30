@@ -16,23 +16,17 @@ $('document').ready(function () {
 			 html += '</ul>';
 			$('#playlist').html(html);
 			
-				$('#playlist li').click(function(e) { 
-			
-			alert('hi');
+			$('#playlist li').click(function(e) { 
 			var i = $(this).index() ;
-			$('#player').attr({
+			/*$('#player').attr({
 				"src":'http://api.ilikemusic.com/stream/'+username+'/'+data[i].obfus+'/stream'+i+'.mp3',
 				"autoplay": "autoplay"
-				});
+				});*/
 				$("#playlist li").removeClass("playing");
 				$(this).attr({"class":"playing"});
 				stopAudio();
 				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
 			});
-				
-			
 		});	
 	});	
-	
-
 })
