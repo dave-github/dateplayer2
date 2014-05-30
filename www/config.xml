@@ -96,5 +96,5 @@
     -->
 	
 <feature name="Media" value="Media" />
-
+<gap:plugin name="org.apache.cordova.media" />
 </widget>
