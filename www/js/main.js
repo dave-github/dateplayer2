@@ -26,6 +26,7 @@ $('document').ready(function () {
 				});
 				$("#playlist li").removeClass("playing");
 				$(this).attr({"class":"playing"});
+				stopAudio();
 				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
 			});
 				
