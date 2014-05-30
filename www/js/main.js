@@ -72,8 +72,10 @@ $('document').ready(function () {
         // onError Callback
         //
         function onError(error) {
+		stopAudio();
+		/*
             alert('code: '    + error.code    + '\n' +
-                  'message: ' + error.message + '\n');
+                  'message: ' + error.message + '\n');*/
         }
 
         // Set audio position
