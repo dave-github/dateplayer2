@@ -6,7 +6,7 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>BB UK Top 20 player</name>
+    <name>UK Top 20 player</name>
 
     <description>
       UK Top 20 playlist audio player tester app
