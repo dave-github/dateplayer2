@@ -23,9 +23,9 @@ padding-left:4px;
 
 
 
-#playlist ul li {
-padding:3px 0px;
-width:350px
+#playlist ol li {
+padding:13px 0px;
+
 }
 
 #playlist ul li:hover {

@@ -4,16 +4,16 @@ $('document').ready(function () {
 		var playlist_date = $('#date').val();
 		var password = $('#password').val();
 		var username = $('#username').val();
-		
+		$('#playlist').html('<img src="img/loadingGif.gif" style="width:16px;"> Loading playlist, please wait...');
 		$.getJSON( "http://api.ilikemusic.com/linkAPI.php?username="+username+"&password="+password+"&chart_date="+playlist_date+"&chart_position=1&chart_position_ending=20&format=json&type=clips", function( data ) {
 			var items = [];
-			var html = '<ul>';
+			var html = '<p>Touch the track titles to start listening:</p><ol>';
 			$.each( data, function( key, val ) {
 				html +='<li><a href="#">' + val.song_title + ' - ' + val.artist_name + '</a></li>'+"\n";
-				
-				$('#player').append('<source src="http://api.ilikemusic.com/stream/'+username+'/'+val.obfus+'/stream'+key+'.mp3" type="audio/mpeg">'+"\n");
+				/*
+				$('#player').append('<source src="http://api.ilikemusic.com/stream/'+username+'/'+val.obfus+'/stream'+key+'.mp3" type="audio/mpeg">'+"\n");*/
 			});
-			 html += '</ul>';
+			 html += '</ol>';
 			$('#playlist').html(html);
 			
 			$('#playlist li').click(function(e) { 
