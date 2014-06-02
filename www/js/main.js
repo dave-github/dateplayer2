@@ -86,7 +86,7 @@ $('document').ready(function () {
         // Set audio position
         //
         function setAudioPosition(position,dur) {
-            document.getElementById('audio_position').innerHTML = position+":"+dur;
+            document.getElementById('audio_position').innerHTML = position+"/"+dur+" secs";
         }
 
 	
