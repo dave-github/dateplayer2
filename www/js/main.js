@@ -37,7 +37,7 @@ $('document').ready(function () {
                         // success callback
                         function(position) {
                             if (position > -1) {
-                                setAudioPosition((position) + " sec", dur);
+                                setAudioPosition(Math.floor(position) , Math.floor(dur));
                             }
                         },
                         // error callback
