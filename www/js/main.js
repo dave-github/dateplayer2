@@ -94,7 +94,7 @@ $('document').ready(function () {
 			var items = [];
 			var html = '<p>Touch the track titles to start listening:</p><ol>';
 			$.each( data, function( key, val ) {
-				html +='<li><a href="#">' + val.song_title + ' - ' + val.artist_name + '</a></li>'+"\n";
+				html +='<li>'+key+'. <a href="#">' + val.song_title + ' - ' + val.artist_name + '</a> </li>'+"\n";
 				
 			});
 			 html += '</ol>';
@@ -104,8 +104,9 @@ $('document').ready(function () {
 			var i = $(this).index() ;
 				$("#playlist li").removeClass("playing");
 				$(this).attr({"class":"playing"});
-				stopAudio();
+				
 				if (my_media) {
+					stopAudio();
 					my_media.release();
 				}
 				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
