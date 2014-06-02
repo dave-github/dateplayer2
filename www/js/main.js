@@ -94,8 +94,11 @@ $('document').ready(function () {
 		var playlist_date = $('#date').val();
 		var password = $('#password').val();
 		var username = $('#username').val();
+		var rand = function() {
+			return Math.random().toString(36).substr(2); // remove `0.`
+		};
 		$('#playlist').html('<img src="img/loadingGif.gif" style="width:16px;"> Loading playlist, please wait...');
-		$.getJSON( "http://api.ilikemusic.com/linkAPI.php?username="+username+"&password="+password+"&chart_date="+playlist_date+"&chart_position=1&chart_position_ending=20&format=json&type=clips", function( data ) {
+		$.getJSON( "http://api.ilikemusic.com/linkAPI.php?username="+username+"&password="+password+"&chart_date="+playlist_date+"&chart_position=1&chart_position_ending=20&format=json&type=clips&ref="+rand, function( data ) {
 			var items = [];
 			var html = '<p>Touch the track titles to start listening:</p><ol>';
 			$.each( data, function( key, val ) {
