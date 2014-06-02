@@ -30,10 +30,7 @@ $('document').ready(function () {
                 mediaTimer = setInterval(function() {
 				
 					var dur = my_media.getDuration();
-						if (dur > 0) {
-							clearInterval(timerDur);
-							document.getElementById('audio_duration').innerHTML = (dur) + " sec";
-						}
+						
 				
                     // get my_media position
                     my_media.getCurrentPosition(
