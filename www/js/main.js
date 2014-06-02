@@ -14,7 +14,7 @@ $('document').ready(function () {
         //
         var my_media = null;
         var mediaTimer = null;
-
+		var playtime = null;
         // Play audio
         //
         function playAudio(src) {
@@ -23,6 +23,7 @@ $('document').ready(function () {
 
             // Play audio
             my_media.play();
+			playtime = my_media.getDuration();
 
             // Update my_media position every second
             if (mediaTimer == null) {
@@ -81,7 +82,7 @@ $('document').ready(function () {
         // Set audio position
         //
         function setAudioPosition(position) {
-            document.getElementById('audio_position').innerHTML = position;
+            document.getElementById('audio_position').innerHTML = position+":"+playtime;
         }
 
 	
