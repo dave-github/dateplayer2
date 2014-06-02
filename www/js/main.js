@@ -41,7 +41,7 @@ $('document').ready(function () {
                             setAudioPosition("Error: " + e);
                         }
                     );
-                }, 1000);
+                }, 10);
             }
         }
 
