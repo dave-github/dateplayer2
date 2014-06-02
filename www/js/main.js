@@ -28,12 +28,19 @@ $('document').ready(function () {
             // Update my_media position every second
             if (mediaTimer == null) {
                 mediaTimer = setInterval(function() {
+				
+					var dur = my_media.getDuration();
+						if (dur > 0) {
+							clearInterval(timerDur);
+							document.getElementById('audio_duration').innerHTML = (dur) + " sec";
+						}
+				
                     // get my_media position
                     my_media.getCurrentPosition(
                         // success callback
                         function(position) {
                             if (position > -1) {
-                                setAudioPosition((position) + " sec");
+                                setAudioPosition((position) + " sec", dur);
                             }
                         },
                         // error callback
@@ -81,8 +88,8 @@ $('document').ready(function () {
 
         // Set audio position
         //
-        function setAudioPosition(position) {
-            document.getElementById('audio_position').innerHTML = position+":"+playtime;
+        function setAudioPosition(position,dur) {
+            document.getElementById('audio_position').innerHTML = position+":"+dur;
         }
 
 	
