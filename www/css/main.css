@@ -25,13 +25,30 @@ padding-left:4px;
 
 list-style:none;
 margin-left:0px;
-padding-left:0px
+padding-left:0px;
+margin-bottom:60px;
 }
 
 #playlist ol li {
-padding:13px 0px 13px 5px;
+padding:0px 0px 0px 5px;
+clear:both;
+height:110px;
+margin-bottom:5px;
 
-
+}
+#playlist ol li a {
+margin-top:30px; height:20px;
+float:left;
+}
+#playlist ol li span {
+margin-top:30px; height:20px;
+float:left;
+margin-right:10px;
+}
+#playlist ol li img {
+float:left;
+height:100px; width:100px;margin-right:20px;
+box-shadow: 2px 2px 5px #000000;
 }
 
 #playlist ul li:hover {
