@@ -105,7 +105,9 @@ $('document').ready(function () {
 				$("#playlist li").removeClass("playing");
 				$(this).attr({"class":"playing"});
 				stopAudio();
-				my_media.release();
+				if (my_media) {
+					my_media.release();
+				}
 				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
 			});
 		});	
