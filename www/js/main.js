@@ -99,7 +99,7 @@ $('document').ready(function () {
 			var items = [];
 			var html = '<p>Touch the track titles to start listening:</p><ol>';
 			$.each( data, function( key, val ) {
-				html +='<li><img src="http://api.ilikemusic.com/image/'+username+'/'+val.obfus+'/image.jpg"><span>'+(key+1)+'.</span> <a href="#">' + val.song_title + ' - ' + val.artist_name + '</a> </li>'+"\n";
+				html +='<li><img src="http://api.ilikemusic.com/image/'+username+'/'+val.obfus+'/image.jpg"><p>'+(key+1)+'. <strong>' + val.song_title + '</strong><br><i>' + val.artist_name + '</i></p> </li>'+"\n";
 				
 			});
 			 html += '</ol>';
