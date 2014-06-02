@@ -99,7 +99,7 @@ $('document').ready(function () {
 			var items = [];
 			var html = '<p>Touch the track titles to start listening:</p><ol>';
 			$.each( data, function( key, val ) {
-				html +='<li>'+key+'. <a href="#">' + val.song_title + ' - ' + val.artist_name + '</a> </li>'+"\n";
+				html +='<li>'+(key+1)+'. <a href="#">' + val.song_title + ' - ' + val.artist_name + '</a> </li>'+"\n";
 				
 			});
 			 html += '</ol>';
