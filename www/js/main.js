@@ -95,7 +95,7 @@ $('document').ready(function () {
 		var password = $('#password').val();
 		var username = $('#username').val();
 		var rand = Math.random().toString(36).substr(2);
-		alert(rand);
+		
 		$('#playlist').html('<img src="img/loadingGif.gif" style="width:16px;"> Loading playlist, please wait...');
 		$.getJSON( "http://api.ilikemusic.com/linkAPI.php?username="+username+"&password="+password+"&chart_date="+playlist_date+"&chart_position=1&chart_position_ending=20&format=json&type=clips&ref="+rand, function( data ) {
 			var items = [];
