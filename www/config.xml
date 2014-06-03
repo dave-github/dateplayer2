@@ -3,8 +3,8 @@
 <!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
 <widget xmlns     = "http://www.w3.org/ns/widgets"
         xmlns:gap = "http://phonegap.com/ns/1.0"
-        id        = "com.phonegap.helloworld"
-        version   = "1.0.0">
+        id        = "uk.co.bluebit.top20player"
+        version   = "0.1.0">
 
     <name>UK Top 20 player</name>
 
@@ -12,8 +12,8 @@
       UK Top 20 playlist audio player tester app
     </description>
 
-    <author href="http://phonegap.com" email="support@phonegap.com">
-     Dave @ Bluebit
+    <author href="http://www.bluebit.co.uk" email="support@bluebit.co.uk">
+     support @ Bluebit
     </author>
 
     <!--
@@ -70,6 +70,7 @@
     <icon src="res/icon/windows-phone/icon-173.png" gap:platform="winphone"   gap:role="background" />
 
     <!-- Define app splash screen for each platform. -->
+	 <gap:splash src="icon.png" />
 	<!---
     <gap:splash src="res/screen/android/screen-ldpi-portrait.png"  gap:platform="android" gap:density="ldpi" />
     <gap:splash src="res/screen/android/screen-mdpi-portrait.png"  gap:platform="android" gap:density="mdpi" />
