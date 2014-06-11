@@ -91,6 +91,13 @@ $('document').ready(function () {
 
 	
 	$( "#select_playlist" ).click(function() {
+		buildPlaylist();
+		
+	});	
+	
+	
+	function buildPlaylist() {
+	
 		var playlist_date = $('#date').val();
 		var password = $('#password').val();
 		var username = $('#username').val();
@@ -119,6 +126,15 @@ $('document').ready(function () {
 				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
 			});
 		});	
-	});	
+	
+	}
+	
+	
+	$('#search_form').on('submit', function(event) {
+		event.preventDefault(); // cancel default form submit
+		
+		buildPlaylist();
+		return false;
+	});
 })
 
