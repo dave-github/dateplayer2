@@ -19,7 +19,7 @@ $('document').ready(function () {
         //
         function playAudio(src) {
             // Create Media object from src
-            my_media = new Media(src, onSuccess, onError);
+            my_media = new Media(src, onSuccess, onError, onStatus);
 
             // Play audio
             my_media.play();
@@ -83,6 +83,12 @@ $('document').ready(function () {
 		/*
             alert('code: '    + error.code    + '\n' +
                   'message: ' + error.message + '\n');*/
+        }
+		
+		function onStatus(param) {
+		//stopAudio();
+		
+            alert('status: '    + param    + '\n' +);
         }
 
         // Set audio position
@@ -150,12 +156,7 @@ $('document').ready(function () {
 		return false;
 	});
 	
-	if(position >= playtime) {
-			
-				alert('track ended');
-				//play next track
-			}
-	
+
 	
 })
 
