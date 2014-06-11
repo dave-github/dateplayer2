@@ -25,11 +25,7 @@ $('document').ready(function () {
             my_media.play();
 			playtime = my_media.getDuration();
 			
-			if(position >= playtime) {
 			
-				alert('track ended');
-				//play next track
-			}
 
             // Update my_media position every second
             if (mediaTimer == null) {
@@ -153,5 +149,13 @@ $('document').ready(function () {
 		buildPlaylist();
 		return false;
 	});
+	
+	if(position >= playtime) {
+			
+				alert('track ended');
+				//play next track
+			}
+	
+	
 })
 
