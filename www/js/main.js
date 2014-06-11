@@ -135,7 +135,7 @@ $('document').ready(function () {
 	
 	});
 	
-	$('#pause_button').click(function(e) {
+	$('#play_button').click(function(e) {
 	
 		my_media.play();
 	
