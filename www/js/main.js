@@ -89,7 +89,7 @@ $('document').ready(function () {
 		//stopAudio();
 		
             
-			if(para==4) {
+			if(param==4) {
 			alert('status: '    + param    + '\n');
 				i++;
 				alert(i);
