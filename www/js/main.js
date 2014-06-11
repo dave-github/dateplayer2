@@ -89,6 +89,11 @@ $('document').ready(function () {
 		//stopAudio();
 		
             alert('status: '    + param    + '\n');
+			if(para==4) {
+				i++;
+				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
+			
+			}
         }
 
         // Set audio position
