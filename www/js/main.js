@@ -17,7 +17,7 @@ $('document').ready(function () {
 		var playtime = null;
         // Play audio
         //
-        function playAudio(src) {
+        function playAudio(src,data,i) {
             // Create Media object from src
             my_media = new Media(src, onSuccess, onError, onStatus);
 
@@ -88,9 +88,12 @@ $('document').ready(function () {
 		function onStatus(param) {
 		//stopAudio();
 		
-            alert('status: '    + param    + '\n');
+            
 			if(para==4) {
+			alert('status: '    + param    + '\n');
 				i++;
+				alert(i);
+				alert(username);
 				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
 			
 			}
@@ -136,7 +139,7 @@ $('document').ready(function () {
 					stopAudio();
 					my_media.release();
 				}
-				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
+				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3",data,i);
 			});
 		});	
 	
