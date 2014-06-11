@@ -64,3 +64,20 @@ border-radius:4px;
 
 }
 
+#play_button {
+width:80px;
+height:80px;
+float:left;
+background-image:url('../img/Player Play.png') ;
+background-size:80px 80px;
+margin:10px 10px;
+}
+
+#pause_button {
+width:80px;
+height:80px;
+float:left;
+background-image:url('../img/Player Pause.png');
+background-size:80px 80px;
+margin:10px 10px;
+}
