@@ -133,13 +133,13 @@ $('document').ready(function () {
 	
 		my_media.pause();
 	
-	}
+	});
 	
 	$('#pause_button').click(function(e) {
 	
 		my_media.play();
 	
-	}
+	});
 	
 	$('#search_form').on('submit', function(event) {
 		event.preventDefault(); // cancel default form submit
