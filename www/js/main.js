@@ -88,7 +88,7 @@ $('document').ready(function () {
 		function onStatus(param) {
 		//stopAudio();
 		
-            alert('status: '    + param    + '\n' +);
+            alert('status: '    + param    + '\n');
         }
 
         // Set audio position
