@@ -93,7 +93,7 @@ $('document').ready(function () {
 			alert('status: '    + param    + '\n');
 				i++;
 				alert(i);
-				alert(username);
+				alert(items);
 				playAudio("http://api.ilikemusic.com/stream/"+username+"/"+data[i].obfus+"/stream"+i+".mp3");
 			
 			}
@@ -111,6 +111,14 @@ $('document').ready(function () {
 		
 	});	
 	
+	
+	function getPlaylistData() {
+		var playlist_date = $('#date').val();
+		var password = $('#password').val();
+		var username = $('#username').val();
+		var rand = Math.random().toString(36).substr(2);
+	
+	}
 	
 	function buildPlaylist() {
 	
@@ -131,7 +139,7 @@ $('document').ready(function () {
 			$('#playlist').html(html);
 			
 			$('#playlist li').click(function(e) { 
-			var i = $(this).index() ;
+			var i = $(this).index();
 				$("#playlist li").removeClass("playing");
 				$(this).attr({"class":"playing"});
 				
